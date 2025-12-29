@@ -221,21 +221,37 @@ code{font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Libera
   height: auto;
   display: block;
 }
-/* Mobile top bar alignment */
-@media (max-width: 768px) {
-  header {
-    padding: 10px 16px;
+
+/* Mobile header/nav layout fix */
+@media (max-width: 720px){
+  .header-inner{
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+    padding: 12px 0;
   }
 
-  .nav-links {
-    display: flex;
-    justify-content: center;
-    gap: 24px;
+  /* Make the 2 links centered, and the Contact button full-width under them */
+  .nav{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    justify-items: center;
+    align-items: center;
+  }
+
+  .nav a{
     width: 100%;
     text-align: center;
+    padding: 10px 0;          /* centers the text visually */
+    line-height: 1.2;
   }
 
-  .nav-links a {
-    font-size: 15px;
+  .nav .btn{
+    grid-column: 1 / -1;      /* Contact spans full width */
+    width: 100%;
+    padding: 12px 0;          /* centers 聯絡 inside the bar */
   }
 }
+
