@@ -182,3 +182,21 @@ code{font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Libera
   .hero-grid, .grid3, .split{grid-template-columns:1fr}
   .brand{min-width:0}
 }
+
+@media (max-width: 640px){
+  .container{padding:0 14px}
+  .header-inner{flex-direction:column; align-items:flex-start; gap:12px}
+  .brand{min-width:0}
+  .nav{width:100%; gap:10px}
+  .nav a{padding:10px 12px}
+  .nav .btn{width:100%}
+  .cta-row{flex-direction:column}
+  .cta-row .btn{width:100%}
+  .hero{padding-top:26px}
+  .hero-card{padding:16px}
+  .card{padding:16px}
+  .split{gap:16px}
+  .footer-inner{flex-direction:column; align-items:flex-start}
+  .footer-links{width:100%; justify-content:flex-start; flex-wrap:wrap}
+  .footer-links a{padding:6px 0}
+}
