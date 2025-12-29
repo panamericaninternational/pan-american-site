@@ -221,3 +221,21 @@ code{font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Libera
   height: auto;
   display: block;
 }
+/* Mobile top bar alignment */
+@media (max-width: 768px) {
+  header {
+    padding: 10px 16px;
+  }
+
+  .nav-links {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    width: 100%;
+    text-align: center;
+  }
+
+  .nav-links a {
+    font-size: 15px;
+  }
+}
