@@ -209,3 +209,15 @@ code{font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Libera
   .footer-links{width:100%; justify-content:flex-start; flex-wrap:wrap}
   .footer-links a{padding:6px 0}
 }
+
+.image-break {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.image-break img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
