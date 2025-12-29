@@ -75,7 +75,17 @@ a:hover{opacity:.9}
 }
 .btn.ghost:hover{background: rgba(255,255,255,.06)}
 
-.hero{padding:52px 0 26px; border-bottom:1px solid var(--line)}
+.hero{
+  padding:52px 0 26px;
+  border-bottom:1px solid var(--line);
+
+  background-image:
+    linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)),
+    url('images/hero-guatemala.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
 .hero-grid{display:grid; grid-template-columns: 1.25fr .75fr; gap:22px; align-items:start}
 .eyebrow{color:var(--muted); margin:0 0 10px; font-weight:600; letter-spacing:.2px}
 h1{margin:0 0 12px; font-size: clamp(28px, 3.4vw, 44px); line-height:1.15}
