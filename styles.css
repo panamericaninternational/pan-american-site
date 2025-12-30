@@ -30,7 +30,7 @@ body{
   background: var(--bg);
 
   color:var(--text);
-  line-height:1.55;
+  line-height:1.6;
 }
 a{color:inherit; text-decoration:none}
 a:hover{opacity:.9}
@@ -95,8 +95,17 @@ color:#ffffff;
 }
 .hero-grid{display:grid; grid-template-columns: 1.25fr .75fr; gap:22px; align-items:start}
 .eyebrow{color:var(--muted); margin:0 0 10px; font-weight:600; letter-spacing:.2px}
-h1{margin:0 0 12px; font-size: clamp(28px, 3.4vw, 44px); line-height:1.15}
-.subhead{color:var(--muted); margin:0 0 18px; font-size: clamp(15px, 1.4vw, 18px)}
+h1{
+  margin:0 0 14px;
+  font-size: clamp(30px, 3.6vw, 46px);
+  line-height:1.1;
+  font-weight:900;
+}
+.subhead{
+  color: rgba(255,255,255,.9);
+  margin:0 0 20px;
+  font-size: clamp(16px, 1.5vw, 19px);
+}
 .cta-row{display:flex; gap:12px; flex-wrap:wrap; margin: 0 0 16px}
 
 .badges{list-style:none; padding:0; margin:0; display:flex; flex-wrap:wrap; gap:8px}
@@ -116,8 +125,16 @@ h1{margin:0 0 12px; font-size: clamp(28px, 3.4vw, 44px); line-height:1.15}
   border-top: 1px solid rgba(255,255,255,.12);
   border-bottom: 1px solid rgba(255,255,255,.12);
 }
-h2{margin:0 0 10px; font-size: clamp(22px, 2.2vw, 30px)}
-.lead{margin:0 0 18px; color:var(--muted); max-width: 72ch}
+h2{
+  margin:0 0 14px;
+  font-size: clamp(24px, 2.4vw, 32px);
+  font-weight:800;
+}
+.lead{
+  margin:0 0 20px;
+  color: rgba(255,255,255,.92);
+  max-width: 70ch;
+}
 
 .grid3{display:grid; grid-template-columns: repeat(3, 1fr); gap:16px}
 .card{
@@ -127,9 +144,14 @@ h2{margin:0 0 10px; font-size: clamp(22px, 2.2vw, 30px)}
   padding:18px;
   box-shadow: var(--shadow);
 }
-.card-title{margin:0 0 10px; font-size:16px; color: var(--text)}
+.card-title{
+  margin:0 0 12px;
+  font-size:17px;
+  font-weight:800;
+  color:#ffffff;
+}
 .list{margin:10px 0 0; padding:0 0 0 18px; color: var(--muted)}
-.list li{margin:6px 0}
+.list li{margin:4px 0}
 
 .hero-card{position:relative}
 .facts{display:grid; gap:12px}
@@ -196,7 +218,10 @@ code{font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Libera
 .footer{padding:26px 0 40px}
 .footer-inner{display:flex; align-items:center; justify-content:space-between; gap:14px; border-top:1px solid rgba(255,255,255,.12); padding-top:18px}
 .footer-links{display:flex; gap:14px}
-.small{font-size:12px}
+.small{
+  font-size:12px;
+  letter-spacing:.2px;
+}
 .muted{color:var(--muted)}
 
 @media (max-width: 900px){
