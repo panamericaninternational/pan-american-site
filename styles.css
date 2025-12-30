@@ -101,6 +101,9 @@ color:#ffffff;
 .image-break{
   position: relative;
   overflow: hidden;
+  width: 100%;
+  margin: 0;
+  padding: 0;
 }
 
 .image-break::after{
@@ -109,6 +112,14 @@ color:#ffffff;
   inset:0;
   background: rgba(0,0,0,.65);
   pointer-events:none;
+}
+
+.image-break img{
+  width: 100%;
+  height: auto;
+  display: block;
+  position: relative;
+  z-index: 0;
 }
 
 .hero-grid{display:grid; grid-template-columns: 1.25fr .75fr; gap:22px; align-items:start}
@@ -243,11 +254,21 @@ code{font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Libera
 }
 .muted{color:var(--muted)}
 
+/* Mobile header/nav layout fix */
 @media (max-width: 900px){
   .hero-grid, .grid3, .split{grid-template-columns:1fr}
   .brand{min-width:0}
 }
-
+@media (max-width: 768px){
+  .image-break img{ max-height: 360px; }
+}
+@media (max-width: 720px){
+  .header-inner{
+  flex-direction: column;
+  align-items: stretch;
+  gap: 4px;
+  padding: 4px 0;
+}
 @media (max-width: 640px){
   .container{padding:0 14px}
   .brand{min-width:0}
@@ -269,30 +290,6 @@ code{font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Libera
   -webkit-transform: translateZ(0);
   backface-visibility: hidden;}
 }
-
-.image-break {
-  width: 100%;
-  margin: 0;
-  padding: 0;
-}
-
-.image-break img {
-  width: 100%;
-  height: auto;
-  display: block;
-  position: relative;
-  z-index: 0;
-}
-
-/* Mobile header/nav layout fix */
-@media (max-width: 720px){
-  .header-inner{
-  flex-direction: column;
-  align-items: stretch;
-  gap: 4px;
-  padding: 4px 0;
-}
-
   /* Make the 2 links centered, and the Contact button full-width under them */
   .nav{
   width: 100%;
@@ -320,9 +317,6 @@ code{font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Libera
 .image-break img{
   max-height: 520px;
   object-fit: cover;
-}
-@media (max-width: 768px){
-  .image-break img{ max-height: 360px; }
 }
 
 /* Hero readability: make the muted hero text white */
