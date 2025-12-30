@@ -246,20 +246,21 @@ code{font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Libera
 
 @media (max-width: 640px){
   .container{padding:0 14px}
-  .header-inner{flex-direction:column; align-items:flex-start; gap:12px}
   .brand{min-width:0}
-  .nav{width:100%; gap:10px}
-  .nav a{padding:10px 12px}
-  .nav .btn{width:100%}
   .cta-row{flex-direction:column}
   .cta-row .btn{width:100%}
   .hero{padding-top:26px}
-  .hero-card{padding:16px}
-  .card{padding:16px}
+  .hero{padding:28px 0 18px}
+  .card{padding:14px}
   .split{gap:16px}
   .footer-inner{flex-direction:column; align-items:flex-start}
   .footer-links{width:100%; justify-content:flex-start; flex-wrap:wrap}
   .footer-links a{padding:6px 0}
+   .cta-row{margin: 0 0 10px}
+   .badges{gap:6px}
+   .badges li{padding:6px 8px; font-size:12px}
+   .section{padding:40px 0}
+   .section.alt{padding:40px 0}
 }
 
 .image-break {
