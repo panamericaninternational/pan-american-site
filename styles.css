@@ -93,6 +93,20 @@ color:#ffffff;
   background-position: center;
   background-repeat: no-repeat;
 }
+/* Unified image overlay — same as hero */
+.image-break{
+  position: relative;
+  overflow: hidden;
+}
+
+.image-break::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background: rgba(0,0,0,.65);
+  pointer-events:none;
+}
+
 .hero-grid{display:grid; grid-template-columns: 1.25fr .75fr; gap:22px; align-items:start}
 .eyebrow{color:var(--muted); margin:0 0 10px; font-weight:600; letter-spacing:.2px}
 h1{
@@ -258,6 +272,8 @@ code{font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Libera
   width: 100%;
   height: auto;
   display: block;
+  position: relative;
+  z-index: 0;
 }
 
 /* Mobile header/nav layout fix */
