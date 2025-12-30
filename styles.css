@@ -3,8 +3,8 @@
 */
 :root{
   /* Base */
-  --bg: #18392b;          /* page background */
-  --panel: #1d543d;       /* cards / alt sections */
+  --bg: #8f9980;          /* page background */
+  --panel: #acb99c;       /* cards / alt sections */
   --text: #e7eef7;        /* primary text */
   --muted: #d1dae6;       /* secondary text */
   --line: rgba(231,238,247,.12);
