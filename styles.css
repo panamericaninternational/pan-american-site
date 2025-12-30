@@ -274,49 +274,9 @@ h2{
 }
 .lead{ max-width: 68ch; }
 
-/* Base application */
-body{
-  background: var(--bg);
-  color: var(--text);
-}
-
-.section.alt{
-  background: var(--panel);
-}
-
-/* Cards */
-.card, .mini-card, .hero-card{
-  background: var(--panel);
-  border: 1px solid var(--line);
-  box-shadow: var(--shadow);
-}
-
-/* Buttons */
-.btn{
-  background: var(--accent);
-  color: #061018;
-  border: none;
-}
-.btn:hover{
-  background: #355c43;
-}
-.btn.ghost{
-  background: transparent;
-  color: var(--text);
-  border: 1px solid var(--line);
-}
-
-/* Headings & emphasis */
-h1, h2, h3{
-  color: var(--text);
-}
-.lead, .subhead, .muted{
-  color: var(--muted);
-}
-
-/* Badges / pills */
-.badges li, .pill{
-  border: 1px solid var(--line);
-  background: rgba(255,255,255,.04);
-  color: var(--muted);
+/* Hero readability: make the muted hero text white */
+.hero .eyebrow,
+.hero .subhead{
+  color: #ffffff;
+  opacity: 0.92;
 }
