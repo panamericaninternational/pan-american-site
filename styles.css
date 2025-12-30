@@ -43,9 +43,9 @@ a:hover{opacity:.9}
 
 .site-header{
   position:sticky; top:0; z-index:50;
-  background: rgba(11,15,20,.75);
+  background: rgba(43,49,45,.92);
   backdrop-filter: blur(10px);
-  border-bottom:1px solid var(--line);
+  border-bottom:1px solid rgba(255,255,255,.12);
 }
 .header-inner{display:flex; align-items:center; justify-content:space-between; gap:18px; padding:14px 0}
 .brand{display:flex; align-items:center; gap:12px; min-width: 220px}
@@ -61,7 +61,7 @@ a:hover{opacity:.9}
 .brand-en{font-size:12px; color:var(--muted)}
 .nav{display:flex; align-items:center; gap:14px; flex-wrap:wrap}
 .nav a{padding:8px 10px; border-radius:10px}
-.nav a:not(.btn):hover{background: rgba(255,255,255,.06)}
+.nav a:not(.btn):hover{background: rgba(143,153,128,.22)}
 .btn{
   display:inline-flex; align-items:center; justify-content:center;
   gap:10px;
@@ -111,7 +111,11 @@ h1{margin:0 0 12px; font-size: clamp(28px, 3.4vw, 44px); line-height:1.15}
 }
 
 .section{padding:44px 0}
-.section.alt{background: rgba(255,255,255,.02); border-top:1px solid var(--line); border-bottom:1px solid var(--line)}
+.section.alt{
+  background: rgba(143,153,128,.55);
+  border-top: 1px solid rgba(255,255,255,.12);
+  border-bottom: 1px solid rgba(255,255,255,.12);
+}
 h2{margin:0 0 10px; font-size: clamp(22px, 2.2vw, 30px)}
 .lead{margin:0 0 18px; color:var(--muted); max-width: 72ch}
 
@@ -190,7 +194,7 @@ input:focus, textarea:focus{border-color: rgba(87,117,83,.70)}
 code{font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace}
 
 .footer{padding:26px 0 40px}
-.footer-inner{display:flex; align-items:center; justify-content:space-between; gap:14px; border-top:1px solid var(--line); padding-top:18px}
+.footer-inner{display:flex; align-items:center; justify-content:space-between; gap:14px; border-top:1px solid rgba(255,255,255,.12); padding-top:18px}
 .footer-links{display:flex; gap:14px}
 .small{font-size:12px}
 .muted{color:var(--muted)}
