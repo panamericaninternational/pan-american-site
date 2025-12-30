@@ -92,6 +92,10 @@ color:#ffffff;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+
+  transform: translateZ(0);
+  will-change: transform;
+  isolation: isolate;
 }
 /* Unified image overlay — same as hero */
 .image-break{
@@ -261,6 +265,9 @@ code{font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Libera
    .badges li{padding:6px 8px; font-size:12px}
    .section{padding:40px 0}
    .section.alt{padding:40px 0}
+   .hero{
+  -webkit-transform: translateZ(0);
+  backface-visibility: hidden;}
 }
 
 .image-break {
