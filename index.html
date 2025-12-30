@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>台美洋行國際股份有限公司 | Pan-American International Company Ltd. — Guatemala–Taiwan Coffee & Raw Materials Sourcing</title>
   <meta name="description" content="台美洋行國際股份有限公司（Pan-American International Company Ltd.）提供瓜地馬拉—台灣咖啡與原物料採購、供應商開發、品質規格、報價談判與物流協調。一站式跨境採購與供應鏈服務。" />
-  <link rel="canonical" href="https://panamericantaiwan.com/" />
+  <link rel="canonical" href="https://panamericantaiwan.com/">
   <meta name="robots" content="index,follow" />
   
 
@@ -37,42 +37,76 @@
   <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "Organization",
-  "name": "台美洋行國際股份有限公司",
-  "alternateName": "Pan-American International Company Ltd.",
-  "url": "https://panamericantaiwan.com/",
-  "logo": "https://panamericantaiwan.com/favicon.svg",
-  "description": "Guatemala–Taiwan coffee & raw materials sourcing, supplier development, negotiation, and logistics coordination.",
-  "email": "info@panamericantaiwan.com",
-  "telephone": "+886937590030",
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "臺北市松山區八德路3段27號7樓",
-    "addressLocality": "Taipei",
-    "addressCountry": "TW"
-  },
-  "areaServed": [
-    {"@type":"Country","name":"Taiwan"},
-    {"@type":"Country","name":"Guatemala"}
-  ],
-  "knowsAbout": [
-    "Green coffee sourcing",
-    "Specialty coffee",
-    "Raw materials sourcing",
-    "International trade",
-    "Import logistics",
-    "Supplier development",
-    "Quality specifications"
-  ],
-  "contactPoint": [{
-    "@type": "ContactPoint",
-    "contactType": "Sales",
-    "email": "info@panamericantaiwan.com",
-    "telephone": "+886937590030",
-    "availableLanguage": ["zh-Hant","en","es"]
-  }]
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://panamericantaiwan.com/#org",
+      "name": "台美洋行國際股份有限公司",
+      "alternateName": "Pan-American International Company Ltd.",
+      "url": "https://panamericantaiwan.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://panamericantaiwan.com/og.png"
+      },
+      "image": "https://panamericantaiwan.com/og.png",
+      "description": "Guatemala–Taiwan sourcing partner for coffee and raw materials. Efficient procurement, reliable execution, and cross-border coordination.",
+      "email": "info@panamericantaiwan.com",
+      "telephone": "+886937590030",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "臺北市松山區八德路3段27號7樓",
+        "addressLocality": "Taipei",
+        "addressCountry": "TW"
+      },
+      "areaServed": [
+        { "@type": "Country", "name": "Taiwan" },
+        { "@type": "Country", "name": "Guatemala" }
+      ],
+      "knowsAbout": [
+        "Green coffee sourcing",
+        "Specialty coffee",
+        "Raw materials sourcing",
+        "International trade",
+        "Import logistics",
+        "Supplier development",
+        "Quality specifications",
+        "Cross-border procurement"
+      ],
+      "contactPoint": [
+        {
+          "@type": "ContactPoint",
+          "contactType": "Sales",
+          "email": "info@panamericantaiwan.com",
+          "telephone": "+886937590030",
+          "availableLanguage": ["zh-Hant", "en", "es"]
+        }
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://panamericantaiwan.com/#website",
+      "url": "https://panamericantaiwan.com/",
+      "name": "Pan-American International Company Ltd.",
+      "publisher": { "@id": "https://panamericantaiwan.com/#org" },
+      "inLanguage": "zh-Hant"
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://panamericantaiwan.com/#webpage",
+      "url": "https://panamericantaiwan.com/",
+      "name": "Pan-American International Company Ltd. | Guatemala–Taiwan Sourcing Partner",
+      "isPartOf": { "@id": "https://panamericantaiwan.com/#website" },
+      "about": { "@id": "https://panamericantaiwan.com/#org" },
+      "primaryImageOfPage": {
+        "@type": "ImageObject",
+        "url": "https://panamericantaiwan.com/og.png"
+      },
+      "inLanguage": "zh-Hant"
+    }
+  ]
 }
 </script>
+
 
 </head>
 
