@@ -269,3 +269,9 @@ h2{
   letter-spacing: .2px;
 }
 .lead{ max-width: 68ch; }
+/* Scale down ONLY origin-processing-1 image */
+.image-break img[src*="origin-processing-1"]{
+  width: 80%;
+  margin: 0 auto;
+  display: block;
+}
