@@ -2,16 +2,20 @@
    You can adjust colors in :root.
 */
 :root{
-  /* Base */
-  --bg: #8f9980;          /* page background */
-  --panel: #acb99c;       /* cards / alt sections */
-  --text: #e7eef7;        /* primary text */
-  --muted: #d1dae6;       /* secondary text */
-  --line: rgba(231,238,247,.12);
-
   /* Brand */
-  --accent: #3f6a4a;      /* muted agri green */
-  --accent-2: #8a6b3b;    /* earth / coffee tone */
+  --bg: #8f9980;              /* MAIN */
+  --accent: #577553;          /* IMPORTANT accent */
+  --accent-soft: #6f7a66;     /* bridge between bg + accent */
+  --accent-2: #8a6b3b;        /* coffee tone */
+
+  /* Surfaces */
+  --panel: #e6eadf;           /* light neutral (optional sections) */
+  --card: #2f3632;            /* dark surfaces (cards/forms) */
+
+  /* Text */
+  --text: #ffffff;
+  --muted: #e2e6dc;
+  --line: rgba(255,255,255,.14);
 
   /* Effects */
   --shadow: 0 10px 30px rgba(0,0,0,.35);
@@ -23,9 +27,8 @@ html{scroll-behavior:smooth}
 body{
   margin:0;
   font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, "Noto Sans TC", "PingFang TC", "Microsoft JhengHei", Arial, sans-serif;
-  background: radial-gradient(1200px 700px at 20% 0%, rgba(122,167,255,.15), transparent 60%),
-              radial-gradient(900px 600px at 80% 10%, rgba(61,220,151,.10), transparent 55%),
-              var(--bg);
+  background: var(--bg);
+
   color:var(--text);
   line-height:1.55;
 }
@@ -49,7 +52,7 @@ a:hover{opacity:.9}
 .logo{
   width:40px; height:40px; border-radius:12px;
   display:grid; place-items:center;
-  background: linear-gradient(135deg, rgba(61,220,151,.25), rgba(122,167,255,.25));
+  background: linear-gradient(135deg, rgba(87,117,83,.35), rgba(143,153,128,.35));
   border:1px solid var(--line);
   font-weight:800;
 }
@@ -62,7 +65,8 @@ a:hover{opacity:.9}
 .btn{
   display:inline-flex; align-items:center; justify-content:center;
   gap:10px;
-  background: linear-gradient(135deg, rgba(61,220,151,.95), rgba(122,167,255,.95));
+  background: linear-gradient(135deg, var(--accent), var(--accent-soft));
+color:#ffffff;
   color:#061018;
   padding:12px 16px;
   border-radius:12px;
@@ -113,7 +117,7 @@ h2{margin:0 0 10px; font-size: clamp(22px, 2.2vw, 30px)}
 
 .grid3{display:grid; grid-template-columns: repeat(3, 1fr); gap:16px}
 .card{
-  background: rgba(15,22,32,.78);
+  background: rgba(47,54,50,.92);
   border:1px solid var(--line);
   border-radius: var(--radius);
   padding:18px;
@@ -146,8 +150,8 @@ h2{margin:0 0 10px; font-size: clamp(22px, 2.2vw, 30px)}
 .step-no{
   width:36px; height:36px; border-radius:12px;
   display:grid; place-items:center;
-  background: rgba(61,220,151,.12);
-  border:1px solid rgba(61,220,151,.35);
+  background: rgba(87,117,83,.22);
+border:1px solid rgba(87,117,83,.45);
   font-weight:900;
 }
 .step h3{margin:0 0 4px}
@@ -156,8 +160,8 @@ h2{margin:0 0 10px; font-size: clamp(22px, 2.2vw, 30px)}
   margin-top:18px;
   padding:14px 16px;
   border-radius: 14px;
-  background: rgba(122,167,255,.08);
-  border:1px solid rgba(122,167,255,.25);
+  background: rgba(87,117,83,.14);
+border:1px solid rgba(87,117,83,.35);
   color: var(--text);
 }
 
@@ -182,7 +186,7 @@ input, textarea{
   color: var(--text);
   outline:none;
 }
-input:focus, textarea:focus{border-color: rgba(122,167,255,.55)}
+input:focus, textarea:focus{border-color: rgba(87,117,83,.70)}
 code{font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace}
 
 .footer{padding:26px 0 40px}
