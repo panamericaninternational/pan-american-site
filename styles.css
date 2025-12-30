@@ -334,3 +334,34 @@ h1, h2, h3{
   background: rgba(255,255,255,.04);
   color: var(--muted);
 }
+/* ===== Fix 3 + Fix 4 overrides ===== */
+.hero::before{
+  background: linear-gradient(
+    to right,
+    rgba(12, 20, 30, 0.86) 0%,
+    rgba(12, 20, 30, 0.72) 45%,
+    rgba(12, 20, 30, 0.45) 75%,
+    rgba(12, 20, 30, 0.30) 100%
+  );
+}
+
+.hero h1,
+.hero .subhead,
+.hero .en-snippet{
+  text-shadow: 0 2px 10px rgba(0,0,0,.55);
+}
+
+.hero-card{
+  background: rgba(15, 22, 32, .88);
+  border: 1px solid rgba(241,245,249,.18);
+  backdrop-filter: blur(8px);
+}
+
+.fact{
+  background: rgba(255,255,255,.06);
+  border: 1px solid rgba(241,245,249,.16);
+}
+
+.fact-v{
+  color: rgba(241,245,249,.92);
+}
