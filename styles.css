@@ -119,8 +119,9 @@ h1{
   font-size:13px;
 }
 
-.section{padding:44px 0}
+.section{padding:56px 0}
 .section.alt{
+  padding:56px 0;
   background: rgba(143,153,128,.55);
   border-top: 1px solid rgba(255,255,255,.12);
   border-bottom: 1px solid rgba(255,255,255,.12);
@@ -299,13 +300,6 @@ code{font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Libera
 @media (max-width: 768px){
   .image-break img{ max-height: 360px; }
 }
-.section{ padding: 56px 0; }
-.section.alt{ padding: 56px 0; }
-h2{
-  margin-bottom: 14px;
-  letter-spacing: .2px;
-}
-.lead{ max-width: 68ch; }
 
 /* Hero readability: make the muted hero text white */
 .hero .eyebrow,
