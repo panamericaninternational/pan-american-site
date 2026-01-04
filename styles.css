@@ -284,9 +284,8 @@ code{font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Libera
   flex-direction: column;
   align-items: stretch;
   gap: 8px;
-  padding: 10px 0 10px;   /* breathing room top/bottom */
-    .brand{
-    align-items: center;     /* keeps logo vertically aligned with text */
+  padding: 10px 0 10px;}   /* breathing room top/bottom */
+    .brand{align-items: center;     /* keeps logo vertically aligned with text */
   }
   .nav{
     margin-bottom: 2px;}      /* prevents bottom “kiss” with header edge */
