@@ -56,14 +56,23 @@ a:hover{opacity:.9}
 }
 .brand{display:flex; align-items:center; gap:14px; min-width: 220px}
 .logo{
-  display:flex;
-  align-items:center;
-  justify-content:center;
+  width:48px;
+  height:48px;
+  display:grid;
+  place-items:center;
+  background: transparent;
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+  flex: 0 0 48px; /* prevents weird shrink when wrapping */
 }
 .logo-img{
-  height: 52px;
-  width: auto;
-  display: block;
+  width:48px;
+  height:48px;
+  display:block;
+  object-fit: contain;
+  transform: scale(.86); /* still prevents the “zoomed in” look */
+  transform-origin: center;
 }
 
 .brand-text{
@@ -275,34 +284,33 @@ code{font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Libera
 }
 .muted{color:var(--muted)}
 
-/* Mobile header/nav layout fix */
+/* Responsive header/nav layout */
 @media (max-width: 900px){
   .hero-grid, .grid3, .split{grid-template-columns:1fr}
   .brand{min-width:0}
-  .brand{align-items: center;}
-  .header-inner{align-items: flex-start;}
 }
-@media (max-width: 768px){
-  .image-break img{ max-height: 360px; }
-}
+
+/* Tablet + narrow desktop: stack header neatly */
 @media (max-width: 720px){
   .header-inner{
-  flex-direction: column;
-  align-items: stretch;
-  gap: 8px;
-  padding: 10px 0 10px;   /* breathing room top/bottom */
-    .brand{
-    align-items: center;     /* keeps logo vertically aligned with text */
+    flex-direction: column;
+    align-items: stretch;
+    gap: 8px;
+    padding: 8px 8px; /* keeps breathing room when stacked */
   }
-  .nav{
-    margin-bottom: 2px;      /* prevents bottom “kiss” with header edge */
-}
-  /* Mobile nav layout */
+
+  .brand{
+    width: 100%;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 12px;
+  }
+
   .nav{
     width: 100%;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 8px;
+    gap: 10px;
     justify-items: center;
     align-items: center;
   }
@@ -310,36 +318,38 @@ code{font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Libera
   .nav a{
     width: 100%;
     text-align: center;
-    padding: 5px 0;
+    padding: 8px 0;
     line-height: 1.05;
   }
 
   .nav .btn{
     grid-column: 1 / -1;
     width: 100%;
-    padding: 7px 0;
+    padding: 10px 0;
   }
 }
+
+/* Phone */
 @media (max-width: 640px){
   .container{padding:0 14px}
-  .brand{min-width:0}
   .cta-row{flex-direction:column}
   .cta-row .btn{width:100%}
-  .hero{padding-top:26px}
   .hero{padding:28px 0 18px}
   .card{padding:14px}
   .split{gap:16px}
   .footer-inner{flex-direction:column; align-items:flex-start}
   .footer-links{width:100%; justify-content:flex-start; flex-wrap:wrap}
   .footer-links a{padding:6px 0}
-   .cta-row{margin: 0 0 10px}
-   .badges{gap:6px}
-   .badges li{padding:6px 8px; font-size:12px}
-   .section{padding:40px 0}
-   .section.alt{padding:40px 0}
-   .hero{
-  -webkit-transform: translateZ(0);
-  backface-visibility: hidden;}
+  .cta-row{margin: 0 0 10px}
+  .badges{gap:6px}
+  .badges li{padding:6px 8px; font-size:12px}
+  .section{padding:40px 0}
+  .section.alt{padding:40px 0}
+}
+
+/* Image break sizing */
+@media (max-width: 768px){
+  .image-break img{ max-height: 360px; }
 }
 
 .image-break img{
@@ -347,7 +357,7 @@ code{font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Libera
   object-fit: cover;
 }
 
-/* Hero readability: make the muted hero text white */
+/* Hero readability */
 .hero .eyebrow,
 .hero .subhead{
   color: #ffffff;
