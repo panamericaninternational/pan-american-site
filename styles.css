@@ -25,7 +25,7 @@
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
 /* Offset anchor jumps for sticky header */
-html{ scroll-padding-top: 96px; }
+html{ scroll-padding-top: 80px; }
 
 #services, #process, #about, #contact{
   scroll-margin-top: 96px;
