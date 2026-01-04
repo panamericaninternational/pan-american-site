@@ -47,7 +47,7 @@ a:hover{opacity:.9}
   backdrop-filter: blur(6px);
   border-bottom:1px solid rgba(255,255,255,.12);
 }
-.header-inner{display:flex; align-items:center; justify-content:space-between; gap:18px; padding:14px 0}
+.header-inner{display:flex; align-items:center; justify-content:space-between; gap:18px; padding:14px 20px}
 .brand{display:flex; align-items:center; gap:14px; min-width: 220px}
 .logo{
   display:flex;
