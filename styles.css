@@ -32,6 +32,10 @@ body{
   color:var(--text);
   line-height:1.6;
 }
+/* iOS notch / Dynamic Island background fix */
+html{
+  background: rgba(43,49,45,.92);
+}
 a{color:inherit; text-decoration:none}
 a:hover{opacity:.9}
 .container{ max-width:var(--max); margin:0 auto; padding-inline: clamp(14px, 2.2vw, 20px); }
@@ -46,11 +50,6 @@ a:hover{opacity:.9}
   background: rgba(43,49,45,.92);
   backdrop-filter: blur(6px);
   border-bottom:1px solid rgba(255,255,255,.12);
-}
-/* iOS safe-area color fix (notch / Dynamic Island) */
-.site-header{
-  padding-top: env(safe-area-inset-top);
-  background-clip: padding-box;
 }
 .header-inner{display:flex; align-items:center; justify-content:space-between; gap:18px; padding-block:14px}
 .brand{display:flex; align-items:center; gap:14px; min-width: 220px}
