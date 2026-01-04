@@ -142,7 +142,7 @@ color:#ffffff;
   z-index: 0;
 }
 
-.hero-grid{display:grid; grid-template-columns: 1.25fr .75fr; gap:22px; align-items:start}
+.hero-grid{display:grid; grid-template-columns: 1.35fr .65fr; gap:22px; align-items:start}
 .eyebrow{color:var(--muted); margin:0 0 10px; font-weight:600; letter-spacing:.2px}
 h1{
   margin:0 0 14px;
@@ -233,6 +233,16 @@ h2{
 
 .timeline{display:grid; gap:12px; margin-top:14px}
 .step{display:grid; grid-template-columns: 40px 1fr; gap:12px; align-items:start}
+.step{
+  display:grid;
+  grid-template-columns: 40px 1fr;
+  gap:12px;
+  align-items:start;
+  padding: 12px 14px;
+  border-radius: 14px;
+  background: rgba(255,255,255,.05);
+  border: 1px solid rgba(255,255,255,.12);
+}
 .step-no{
   width:36px; height:36px; border-radius:12px;
   display:grid; place-items:center;
@@ -289,7 +299,7 @@ input:focus, textarea:focus{border-color: rgba(87,117,83,.70)}
 code{font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace}
 
 .footer{padding:26px 0 40px}
-.footer-inner{display:flex; align-items:center; justify-content:space-between; gap:14px; border-top:1px solid rgba(255,255,255,.12); padding-top:18px}
+.footer-inner{display:flex; align-items:center; justify-content:space-between; gap:14px; border-top:0; padding-top:18px}
 .footer-links{display:flex; gap:14px}
 .small{
   font-size:12px;
