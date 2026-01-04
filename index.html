@@ -365,6 +365,7 @@
         <div class="footer-links">
           <a href="#top">回到頂端</a>
           <a href="sitemap.html">網站地圖</a>
+        <div class="back-to-top no-print"></div>
         </div>
       </div>
     </section>
@@ -376,3 +377,31 @@
 
 </body>
 </html>
+
+
+<script>
+(function () {
+  function showPrintNotice() {
+    if (document.getElementById('print-notice')) return;
+
+    const notice = document.createElement('div');
+    notice.id = 'print-notice';
+    notice.innerText = "For best results, enable “Background graphics” in print settings.";
+    notice.style.position = 'fixed';
+    notice.style.bottom = '20px';
+    notice.style.right = '20px';
+    notice.style.background = '#1f2933';
+    notice.style.color = '#ffffff';
+    notice.style.padding = '12px 16px';
+    notice.style.borderRadius = '6px';
+    notice.style.fontSize = '13px';
+    notice.style.zIndex = '9999';
+
+    document.body.appendChild(notice);
+
+    setTimeout(() => notice.remove(), 8000);
+  }
+
+  window.addEventListener('beforeprint', showPrintNotice);
+})();
+</script>
