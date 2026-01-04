@@ -273,6 +273,8 @@ code{font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Libera
 @media (max-width: 900px){
   .hero-grid, .grid3, .split{grid-template-columns:1fr}
   .brand{min-width:0}
+  .brand{align-items: center;}
+  .header-inner{align-items: flex-start;}
 }
 @media (max-width: 768px){
   .image-break img{ max-height: 360px; }
@@ -283,6 +285,28 @@ code{font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Libera
   align-items: stretch;
   gap: 4px;
   padding: 4px 0;
+  /* Mobile nav layout */
+  .nav{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+    justify-items: center;
+    align-items: center;
+  }
+
+  .nav a{
+    width: 100%;
+    text-align: center;
+    padding: 5px 0;
+    line-height: 1.05;
+  }
+
+  .nav .btn{
+    grid-column: 1 / -1;
+    width: 100%;
+    padding: 7px 0;
+  }
 }
 @media (max-width: 640px){
   .container{padding:0 14px}
@@ -304,29 +328,6 @@ code{font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Libera
    .hero{
   -webkit-transform: translateZ(0);
   backface-visibility: hidden;}
-}
-  /* Make the 2 links centered, and the Contact button full-width under them */
-  .nav{
-  width: 100%;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 8px;
-  justify-items: center;
-  align-items: center;
-}
-
-  .nav a{
-    width: 100%;
-    text-align: center;
-    padding: 5px 0;          /* centers the text visually */
-    line-height: 1.05;
-  }
-
-  .nav .btn{
-    grid-column: 1 / -1;      /* Contact spans full width */
-    width: 100%;
-    padding: 7px 0;          /* centers 聯絡 inside the bar */
-  }
 }
 
 .image-break img{
