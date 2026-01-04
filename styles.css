@@ -401,3 +401,14 @@ code{font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Libera
   color: #ffffff;
   opacity: 0.92;
 }
+
+/* Contact-only soft button variant */
+.btn.soft {
+  background-color: color-mix(in srgb, var(--btn-green) 55%, transparent);
+  border: 1px solid color-mix(in srgb, var(--btn-green) 70%, transparent);
+  color: #0f1a14;
+}
+
+.btn.soft:hover {
+  background-color: color-mix(in srgb, var(--btn-green) 65%, transparent);
+}
