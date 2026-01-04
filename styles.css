@@ -294,6 +294,14 @@ border:1px solid rgba(87,117,83,.35);
 .contact-list{list-style:none; padding:0; margin:12px 0 0; color:var(--muted)}
 .contact-list li{margin:8px 0}
 .contact-list span{display:inline-block; min-width:92px; color: var(--text); font-weight:800}
+.contact-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;}
+.contact-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;}
 
 .form label{display:block; margin:12px 0}
 .form span{display:block; margin:0 0 6px; color:var(--muted); font-weight:700; font-size:13px}
