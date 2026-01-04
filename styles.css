@@ -86,9 +86,18 @@ a{color:inherit;text-decoration:none}
 
 .split{display:grid;grid-template-columns:1fr 1fr;gap:24px}
 .media{
-  border-radius:20px;overflow:hidden;border:1px solid var(--line)
+  border-radius:20px;
+  overflow:hidden;
+  border:1px solid var(--line);
+  max-height: 420px;           /* PATCH: limits “fat” images */
 }
-.media img{display:block;width:100%;height:auto}
+
+.media img{
+  display:block;
+  width:100%;
+  height:100%;                 /* PATCH: enables cropping */
+  object-fit:cover;            /* PATCH: crop instead of stretching */
+}
 
 .badges{display:flex;gap:10px;flex-wrap:wrap;margin-top:10px}
 .badges li{
@@ -111,29 +120,30 @@ a{color:inherit;text-decoration:none}
 @media (max-width: 900px){
   .hero-grid,.grid3,.split{grid-template-columns:1fr}
   .hero h2{font-size:34px}
+  .media{max-height: 320px;}   /* PATCH: smaller image height on smaller screens */
+
 }
 
-/* PATCH: make the 720px rules valid CSS so later image sizing rules always apply */
 @media (max-width: 720px){
   .header-inner{
     flex-direction: column;
     align-items: flex-start;
-  }
 
-  .header-inner .brand{
-    width: 100%;
-    justify-content: flex-start;
-  }
+    .brand{
+      width: 100%;
+      justify-content: flex-start;
+    }
 
-  .header-inner .nav{
-    width: 100%;
-    justify-content: space-between;
-  }
+    .nav{
+      width: 100%;
+      justify-content: space-between;
+    }
 
-  .header-inner .nav a{
-    padding: 10px 0;
-    width: 32%;
-    text-align: center;
+    .nav a{
+      padding: 10px 0;
+      width: 32%;
+      text-align: center;
+    }
   }
 
   .hero{padding:38px 0 28px}
