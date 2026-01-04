@@ -24,6 +24,12 @@
 }
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
+/* Offset anchor jumps for sticky header */
+html{ scroll-padding-top: 96px; }
+
+#services, #process, #about, #contact{
+  scroll-margin-top: 96px;
+}
 body{
   margin:0;
   font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, "Noto Sans TC", "PingFang TC", "Microsoft JhengHei", Arial, sans-serif;
