@@ -68,8 +68,8 @@ a:hover{opacity:.9}
 }
 .brand-zh{font-weight:700; letter-spacing:.2px}
 .brand-en{font-size:12px; color:var(--muted)}
-.nav{display:flex; align-items:center; gap:14px; flex-wrap:wrap}
-.nav a{padding:8px 10px; border-radius:10px}
+.nav{display:flex; align-items:center; gap:14px; flex-wrap:nowrap; justify-content:flex-end}
+.nav a{padding:8px 10px; border-radius:10px; white-space:nowrap}
 .nav a:not(.btn):hover{background: rgba(143,153,128,.22)}
 .btn{
   display:inline-flex; align-items:center; justify-content:center;
@@ -275,47 +275,19 @@ code{font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Libera
   .brand{min-width:0}
   .brand{align-items: center;}
   .header-inner{align-items: flex-start;}
+  .nav{flex-wrap:wrap;}
 }
 @media (max-width: 768px){
   .image-break img{ max-height: 360px; }
 }
-@media (max-width: 720px){
-  .header-inner{
-  flex-direction: column;
-  align-items: stretch;
-  gap: 8px;
-  padding: 10px 0 10px;   /* breathing room top/bottom */
-    .brand{
-    align-items: center;     /* keeps logo vertically aligned with text */
-  }
-  .nav{
-    margin-bottom: 2px;      /* prevents bottom “kiss” with header edge */
-}
-  /* Mobile nav layout */
-  .nav{
-    width: 100%;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 8px;
-    justify-items: center;
-    align-items: center;
-  }
 
-  .nav a{
-    width: 100%;
-    text-align: center;
-    padding: 5px 0;
-    line-height: 1.05;
-  }
-
-  .nav .btn{
-    grid-column: 1 / -1;
-    width: 100%;
-    padding: 7px 0;
-  }
-}
 @media (max-width: 640px){
   .container{padding:0 14px}
+   /* Header: prevent nav/button from breaking awkwardly on small screens */
+  .header-inner{flex-direction:column; align-items:stretch; gap:10px; padding:12px 0}
+  .nav{width:100%; display:grid; grid-template-columns:1fr 1fr; gap:10px; justify-items:stretch}
+  .nav a{width:100%; text-align:center; padding:10px 0; line-height:1.05}
+  .nav .btn{grid-column:1 / -1; width:100%}
   .brand{min-width:0}
   .cta-row{flex-direction:column}
   .cta-row .btn{width:100%}
