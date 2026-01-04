@@ -1,0 +1,46 @@
+@media print {
+
+  /* Reset */
+  * {
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+
+  body {
+    background: #ffffff !important;
+    color: #000000 !important;
+  }
+
+  /* Hide non-essential UI */
+  header,
+  nav,
+  .floating-header,
+  .back-to-top,
+  footer,
+  .no-print {
+    display: none !important;
+  }
+
+  /* Prevent section overlap */
+  section {
+    page-break-inside: avoid;
+  }
+
+  /* Typography */
+  h1, h2, h3 {
+    color: #000000 !important;
+    page-break-after: avoid;
+  }
+
+  p, li {
+    font-size: 11pt;
+    line-height: 1.5;
+  }
+
+  /* Links */
+  a::after {
+    content: " (" attr(href) ")";
+    font-size: 9pt;
+  }
+
+}
