@@ -289,7 +289,7 @@ code{font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Libera
     align-items: center;     /* keeps logo vertically aligned with text */
   }
   .nav{
-    margin-bottom: 2px;      /* prevents bottom “kiss” with header edge */
+    margin-bottom: 2px;}      /* prevents bottom “kiss” with header edge */
 }
   /* Mobile nav layout */
   .nav{
